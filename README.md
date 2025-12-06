@@ -1,4 +1,4 @@
-# CS 598 Reproduction of EHRMamba
+# CS 598 DL4H - Reproduction of EHRMamba
 
 Paper: https://arxiv.org/abs/2405.14567 (EHRMamba: Towards Generalizable and Scalable Foundation Models for Electronic Health Records)
 
