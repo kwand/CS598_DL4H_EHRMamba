@@ -16,7 +16,7 @@ conda activate ehrmamba
 pip3 install torch=2.9.1 --index-url https://download.pytorch.org/whl/cu130
 ```
 
-2. Install at least PyHealth v2.0 (you may need to manually git clone the repository, remove version requirements in `pyproject.toml` such as requiring PyTorch 2.7.1, etc. Otherwise, it may force use a lower CUDA version i.e. 12.6 and therefore preventing installation of later packages)
+2. Install at least PyHealth v2.0 (you may need to manually git clone the repository, remove version requirements in `pyproject.toml` such as requiring PyTorch 2.7.1, etc. Otherwise, it may force use of a lower CUDA version i.e. 12.6 and therefore preventing installation of later packages)
 
 ```
 git clone https://github.com/sunlabuiuc/PyHealth
@@ -37,7 +37,7 @@ pip install mambapy
 pip install click
 ```
 
-4. (optional) Install `mamba_ssm` and `causal_conv1d`. Currently, there are open issues installing from pip, so we suggest cloning the repositories and using `pip install -e . --no-build-isolation` (to prevent errors about CUDA version mismatch, which occur even if you install)
+4. (optional) Install `mamba_ssm` and `causal_conv1d`. Currently, there are open issues installing from pip, so we suggest cloning the repositories and using `pip install -e . --no-build-isolation` (to prevent errors about CUDA version mismatch, which occur even if you install matching CUDA versions throughout)
 
 ## Overview
 
