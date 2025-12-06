@@ -46,16 +46,16 @@ Please see `runner.py` and `main.py` for instructions on how to run the code. Ch
 - `runner.py` - will automatically run all experiments in presented in the report, calling `main.py` will the necessary arguments
 - `main.py` - handles individual experiment runs, training on the specified clinical predictive task using the specified model and other arguments. Please see `--help` for a list of all options.
 - `models/`
-    - `models/mamba_mpy.py` - main implementation of EHRMamba-style architecture made compatible with PyHealth
-    - `models/mamba2_mpy.py` - extension implementation replacing with Mamba2 blocks
-    - `models/mamba_mpy_add.py` - (unused, provided for reference) follows EHRMamba closely in adding together embeddings before passing into the model; as mentioned in report, performs much worse and due to limited compute time, was not run fully in experiments
-    - `models/jamba_mpy.py` (unused, for reference) alternative LLM suggestion of replacing Mamba blocks with Jamba-style (hybrid Mamba architecture using some attention layers); performs worse, likely due to some lingering bugs that we were unable to fully resolve - again, not run fully due to limited compute time.
-    - `models/mamba.py` (unused, for reference) original LLM-assisted implementation using `mamba_ssm` instead of `mambapy`; has some bugs and we were not fully satisfied with the implementation
+    - `mamba_mpy.py` - main implementation of EHRMamba-style architecture made compatible with PyHealth
+    - `mamba2_mpy.py` - extension implementation replacing with Mamba2 blocks
+    - `mamba_mpy_add.py` - (unused, provided for reference) follows EHRMamba closely in adding together embeddings before passing into the model; as mentioned in report, performs much worse and due to limited compute time, was not run fully in experiments
+    - `jamba_mpy.py` (unused, for reference) alternative LLM suggestion of replacing Mamba blocks with Jamba-style (hybrid Mamba architecture using some attention layers); performs worse, likely due to some lingering bugs that we were unable to fully resolve - again, not run fully due to limited compute time.
+    - `mamba.py` (unused, for reference) original LLM-assisted implementation using `mamba_ssm` instead of `mambapy`; has some bugs and we were not fully satisfied with the implementation
 - `tasks/`
-    - `tasks/tasks.py` - implements PyHealth-compatible tasks for mortality and LOS prediction to match exactly the descriptions as in the EHRMamba paper (see report for exact differences versus existing PyHealth tasks)
+    - `tasks.py` - implements PyHealth-compatible tasks for mortality and LOS prediction to match exactly the descriptions as in the EHRMamba paper (see report for exact differences versus existing PyHealth tasks)
 - `utils/`
-    - `utils/optimization.py` - helper code to build LR scheduler with linear warmup and decay
-    - `utils/trainer.py` - modified version of PyHealth's Trainer class, to add support for LR schedulers
+    - `optimization.py` - helper code to build LR scheduler with linear warmup and decay
+    - `trainer.py` - modified version of PyHealth's Trainer class, to add support for LR schedulers
 - `datasets/mimic-iv-2.2` - expected path for MIMIC-IV dataset (can be changed in `main.py`)
 
 
